@@ -17,11 +17,12 @@ img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.nav-wrap{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand img{width:240px;height:68px;object-fit:cover;object-position:left center}
-.nav{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:600}
+.nav-wrap{min-height:142px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;flex-shrink:0}
+.brand img{width:auto;height:118px;max-width:640px;object-fit:contain;object-position:left center}
+.nav{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:600;flex-wrap:wrap;justify-content:flex-end}
 .nav a:hover{color:var(--blue)}
-.menu-toggle{display:none;background:none;border:0;font-size:26px}
+.menu-toggle{display:none;background:none;border:0;font-size:26px;color:var(--deep)}
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;padding:14px 22px;border-radius:10px;font-weight:700;border:1px solid var(--blue);transition:.2s}
 .btn:hover{transform:translateY(-1px);background:var(--deep)}
 .btn-small{padding:10px 16px}
@@ -71,18 +72,18 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #d8dee7;border-radi
 
 @media (max-width: 900px){
   .menu-toggle{display:block}
-  .nav{display:none;position:absolute;top:84px;left:0;right:0;background:white;padding:20px;flex-direction:column;border-bottom:1px solid var(--border)}
+  .nav{display:none;position:absolute;top:142px;left:0;right:0;background:white;padding:20px;flex-direction:column;border-bottom:1px solid var(--border)}
   .nav.open{display:flex}
   .hero-grid,.two-col,.help-grid,.contact-grid,.partner-card{grid-template-columns:1fr}
   .principles,.cards-grid,.project-grid,.news-grid{grid-template-columns:1fr 1fr}
-  .brand img{width:210px}
+  .brand img{height:98px;max-width:430px}
 }
 @media (max-width: 620px){
   .container{width:min(100% - 28px,1180px)}
   .hero{padding-top:64px}
   .section{padding:68px 0}
   .principles,.cards-grid,.project-grid,.news-grid{grid-template-columns:1fr}
-  .brand img{width:175px;height:60px}
+  .brand img{height:82px;max-width:320px}
   h1{font-size:44px}
 }
 
@@ -99,3 +100,22 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #d8dee7;border-radi
 .bank-box{background:#fff;border:1px solid var(--border);border-left:5px solid var(--yellow);border-radius:16px;padding:22px}
 .bank-box code{display:block;white-space:pre-wrap;font-family:inherit;font-size:15px}
 @media(max-width:900px){.content-grid{grid-template-columns:1fr}.sidebar-card{position:static}}
+
+
+.section-photo{margin-top:34px;border-radius:24px;overflow:hidden;border:1px solid var(--border);box-shadow:0 18px 50px rgba(20,32,51,.08)}
+.section-photo img{width:100%;height:420px;object-fit:cover;display:block}
+.direction-list{display:grid;gap:34px;margin-top:36px}
+.direction-feature{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:24px;padding:22px;box-shadow:0 14px 38px rgba(20,32,51,.05)}
+.direction-feature:nth-child(even) .direction-media{order:2}
+.direction-feature:nth-child(even) .direction-content{order:1}
+.direction-media img{width:100%;height:320px;object-fit:cover;border-radius:18px;display:block}
+.direction-content h3{font-size:28px;margin:6px 0 14px}
+.direction-tag{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:800;margin-bottom:8px}
+.direction-content p{font-size:17px;color:#4d596c;margin:0}
+.hero-card p,.card p,.news-card p{color:#4d596c}
+
+@media (max-width: 900px){.direction-feature{grid-template-columns:1fr}.direction-feature:nth-child(even) .direction-media,.direction-feature:nth-child(even) .direction-content{order:initial}.section-photo img{height:320px}}
+@media (max-width: 620px){.nav{top:116px}.nav-wrap{min-height:116px}.brand img{height:76px;max-width:280px}.section-photo img{height:240px}.direction-media img{height:240px}.direction-content h3{font-size:24px}}
+
+.site-header .brand{padding:10px 0}
+.site-header .brand img{display:block;object-fit:contain !important}
