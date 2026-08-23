@@ -1,17 +1,23 @@
-# Фонд відкритого співробітництва — сайт без розділу «Проєкти»
+# Фонд відкритого співробітництва — flat GitHub Pages version
 
-Структура:
-- index.html — Головна + реквізити / як допомогти
-- about.html — Про фонд
-- directions.html — Напрями діяльності
-- news.html — Новини
-- news/*.html — Окремі новини
-- partners.html — Партнери
-- contacts.html — Контакти
+Усі файли лежать в корені репозиторію:
+
+- index.html
+- about.html
+- directions.html
+- news.html
+- site-launch.html
+- partners.html
+- contacts.html
+- styles.css
+- script.js
+- logo.jpeg
+
+Ця версія спеціально підготовлена для простого завантаження через GitHub web interface без папок.
 
 Перед запуском:
 1. Додати точні банківські реквізити.
 2. Додати робочий email.
-3. Замінити тестові новини на реальні.
-4. Додати логотипи партнерів.
-5. Після цього підключити GitHub Pages і власний домен.
+3. Замінити тестову новину на реальну.
+4. За потреби додати логотипи партнерів.
+5. Увімкнути GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root).
